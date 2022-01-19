@@ -1,5 +1,7 @@
 
 var x = prompt("Ingrese el numero de pokemon o nombre del pokemón");
+var z = prompt("Ingrese segundo numero de pokemon o nombre del pokemón");
+var b = "https://pokeapi.co/api/v2/pokemon/" + z.toLowerCase(); + "/";
 
 var y ="https://pokeapi.co/api/v2/pokemon/" + x.toLowerCase(); + "/";
 
@@ -13,7 +15,7 @@ fetch(y)
 })
 .catch(err=>console.log(err))
 
-fetch('https://pokeapi.co/api/v2/pokemon/8/')
+fetch(b)
 .then(response => response.json())
 .then(pokemon2 => {
   let element2 = document.getElementById('elemento2')
